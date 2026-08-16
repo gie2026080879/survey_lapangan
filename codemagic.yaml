@@ -1,0 +1,20 @@
+workflows:
+  apk-survey:
+    name: Build APK Survey Lapangan
+    instance: linux_x2
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: '*'
+          include: true
+    scripts:
+      - name: Ambil dependencies
+        run: flutter pub get
+      - name: Build APK release
+        run: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
