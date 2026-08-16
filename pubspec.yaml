@@ -1,0 +1,27 @@
+name: survey_lapangan
+description: "Aplikasi entry survey lapangan dengan tagging koordinat GPS dan foto lokasi."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  geolocator: ^12.0.0        # GPS / koordinat
+  image_picker: ^1.1.2       # kamera & galeri
+  path_provider: ^2.1.4      # simpan foto permanen
+  sqflite: ^2.3.3            # database lokal
+  intl: ^0.19.0              # format tanggal
+  share_plus: ^10.0.0        # kirim foto + data (WA, email, dll)
+  url_launcher: ^6.3.0       # buka Google Maps
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
